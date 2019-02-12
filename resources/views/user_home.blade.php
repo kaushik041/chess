@@ -20,10 +20,10 @@
 				<fieldset style="padding: 25px 30px 25px;">
 
 					<div class="row" style="padding: 5px 70px;">
-						<a href="#" class="button" style="width:88%;text-align: center;">Tournament</a>
+						<a href="{{url('/tournament_list')}}" class="button" style="width:88%;text-align: center;">Tournament</a>
 					</div>
 					<div class="row" style="padding: 5px 70px;">
-						<a href="#" class="button" style="width:88%;text-align: center;">Register</a>
+						<a href="{{url('/register')}}" class="button" style="width:88%;text-align: center;">Register</a>
 					</div>
 					<div class="row" style="padding: 5px 70px;">
 						<a href="#" class="button" style="width:88%;text-align: center;">Renew</a>

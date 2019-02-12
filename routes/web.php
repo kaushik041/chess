@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user_home');
 });
 
 Auth::routes();
@@ -23,4 +23,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user_registration', 'HomeController@user_registration');
 Route::get('/user_home', 'HomeController@user_home');
 Route::get('/tournament_list', 'HomeController@tournament_list');
+Route::resource('register', 'UserRegisterController');
+Route::get('/user_registrations', 'UserRegisterController@index');
 
