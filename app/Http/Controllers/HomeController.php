@@ -38,5 +38,36 @@ class HomeController extends Controller
     {
         return view('tournament_list');
     }
+    public function user_tournament_join()
+    {
+        return view('user_tournament_join');
+    }
+    public function user_payment()
+    {
+        return view('user_payment');
+    }
+
+
+
+    public function admin_dashboard()
+    {
+        return view('admin_dashboard');
+    }
+    public function add_tournament()
+    {
+        return view('add_tournament');
+    }
+    public function admin_tournament_list()
+    {
+        return view('admin_tournament_list');
+    }
+    public function user_list()
+    {
+        return view('user_list');
+    }
+    public function transaction_list()
+    {
+        return view('transaction_list');
+    }
 
 }
