@@ -15,6 +15,8 @@ class UserRegister extends Model
         'email',
         'gender',
         'address',
-        'dist'
+        'dist',
+        'joidId'
+
     ];
 }
