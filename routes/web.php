@@ -23,6 +23,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user_registration', 'HomeController@user_registration');
 Route::get('/user_home', 'HomeController@user_home');
 Route::get('/tournament_list', 'HomeController@tournament_list');
-Route::resource('register', 'UserRegisterController');
-Route::get('/user_registrations', 'UserRegisterController@index');
+Route::get('/user_tournament_join', 'HomeController@user_tournament_join');
+Route::get('/user_payment', 'HomeController@user_payment');
 
+
+Route::get('/admin_dashboard', 'HomeController@admin_dashboard');
+Route::get('/add_tournament', 'HomeController@add_tournament');
+Route::get('/admin_tournament_list', 'HomeController@admin_tournament_list');
+Route::get('/user_list', 'HomeController@user_list');
+Route::get('/transaction_list', 'HomeController@transaction_list');
