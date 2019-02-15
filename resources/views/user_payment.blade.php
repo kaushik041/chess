@@ -9,6 +9,7 @@
 
 		<link rel="stylesheet" href="{{asset('user_assets/css/demo.css')}}">
 		<link rel="stylesheet" href="{{asset('user_assets/css/sky-forms.css')}}">
+		
 	</head>
 	<body class="bg-purple">
 		<div class="body">
@@ -18,16 +19,16 @@
                     <img src="{{asset('user_assets/img/logo.png')}}" alt="" />
                     <p>Payment Details</p>
                 </header>
-
+				{{-- {{$check}} --}}
 				<fieldset>
                     <section>
                         <label class="input">
-                            <input type="text" value="Name : Sankalpa Naskar" disabled>
+                            <input type="text" value={{$check[0]->full_name}} disabled>
                         </label>
                     </section>
                     <section>
                         <label class="input">
-                            <input type="text" value="Validity : 84 Days Left" disabled>
+                            <input type="text" value="Account Validity : 84 Days Left" disabled>
                         </label>
                     </section>
 					<section>

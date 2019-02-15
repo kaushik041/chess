@@ -20,25 +20,25 @@
                             <table id="example" class="display responsive nowrap" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>Tournament Name</th>
-                                        <th>Description</th>
-                                        <th>Date</th>
-                                        <th>Time</th>
-                                        <th>Place</th>
-                                        <th>Fees</th>
-                                        <th>Prize Money</th>
-                                        <th>Action</th>
+                                            <th>Tournament</th>
+                                            <th>Place</th>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Entry Fee</th>
+                                            <th>Prize Money</th>
+                                            <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(isset($tournaments))
+                                    @foreach ($tournaments as $item)
                                     <tr>
-                                        <td>Tournament 1</td>
-                                        <td>Demo</td>
-                                        <td>12/11/2019</td>
-                                        <td>12:20pm</td>
-                                        <td>Kolkata</td>
-                                        <td>Rs. 500</td>
-                                        <td>1st Prize : Rs. 5000</td>
+                                        <td>{{$item->t_name}}</td>
+                                        <td>{{$item->t_place}}</td>
+                                        <td>{{$item->t_date}}</td>
+                                        <td>{{$item->t_time}}</td>
+                                        <td>{{$item->t_fees}}</td>
+                                        <td>{{$item->t_prize}}</td>
                                         <td>
                                             <a href="#" class="btn btn-success">
                                                 Edit
@@ -48,6 +48,8 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                        </div>

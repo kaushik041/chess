@@ -32,15 +32,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(isset($users))
+                                    @foreach ($users as $item)
                                     <tr>
-                                        <td>Sankalpa Naskar</td>
-                                        <td>Swapan Kumar Naskar</td>
-                                        <td>12/11/2019</td>
-                                        <td>7501191806</td>
-                                        <td>sankalpa.bca@gmail.com</td>
-                                        <td>Male</td>
-                                        <td>Salt Lake, Sec V, DN 51, Kolkata- 700091</td>
-                                        <td>South 24 Pgs.</td>
+                                    <td>{{$item->full_name}}</td>
+                                    <td>{{$item->guardian_name}}</td>
+                                    <td>{{$item->dob}}</td>
+                                    <td>{{$item->phone}}</td>
+                                    <td>{{$item->email}}</td>
+                                    <td>{{$item->gender}}</td>
+                                    <td>{{$item->address}}</td>
+                                    <td>{{$dist[$item->dist]}}</td>
                                         <td>
                                             <a href="#" class="btn btn-success">
                                                 Edit
@@ -50,6 +52,8 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                        </div>

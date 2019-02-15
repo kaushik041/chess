@@ -19,65 +19,32 @@
                     <img src="{{asset('user_assets/img/logo.png')}}" alt="" />
                 </header>
                 <fieldset style="padding: 25px 30px 25px;">
-
                     <div class="row">
                         <table class="table table-bordered">
                             <tr>
                                 <th>Tournament</th>
                                 <th>Place</th>
-                                <th>Start</th>
-                                <th>End</th>
+                                <th>Date</th>
+                                <th>Time</th>
                                 <th>Entry Fee</th>
+                                <th>Prize Money</th>
                                 <th>Action</th>
                             </tr>
+                            <tbody>
+                            @if(isset($tournaments))
+                            @foreach ($tournaments as $item)
                             <tr class="success">
-                                <td>ALEKHINE CHESS CLUB NEW YEAR OPEN</td>
-                                <td>OUTRAM CLUB, KOLKAT</td>
-                                <td>2019-01-02</td>
-                                <td>2019-01-04</td>
-                                <td>Rs. 500</td>
-                                <td><button type="button" class="btn btn-primary">Apply</button></td>
+                            <td>{{$item->t_name}}</td>
+                            <td>{{$item->t_place}}</td>
+                            <td>{{$item->t_date}}</td>
+                            <td>{{$item->t_time}}</td>
+                            <td>{{$item->t_fees}}</td>
+                            <td>{{$item->t_prize}}</td>
+                            <td><a href="{{url('/user_tournament_join')}}" class="btn btn-primary" style="color:white">Apply</a></td>
                             </tr>
-                            <tr class="warning">
-                                <td>ALEKHINE CHESS CLUB NEW YEAR OPEN</td>
-                                <td>OUTRAM CLUB, KOLKAT</td>
-                                <td>2019-01-02</td>
-                                <td>2019-01-04</td>
-                                <td>Rs. 500</td>
-                                <td><button type="button" class="btn btn-primary">Apply</button></td>
-                            </tr>
-                            <tr class="success">
-                                <td>ALEKHINE CHESS CLUB NEW YEAR OPEN</td>
-                                <td>OUTRAM CLUB, KOLKAT</td>
-                                <td>2019-01-02</td>
-                                <td>2019-01-04</td>
-                                <td>Rs. 500</td>
-                                <td><button type="button" class="btn btn-primary">Apply</button></td>
-                            </tr>
-                            <tr class="warning">
-                                <td>ALEKHINE CHESS CLUB NEW YEAR OPEN</td>
-                                <td>OUTRAM CLUB, KOLKAT</td>
-                                <td>2019-01-02</td>
-                                <td>2019-01-04</td>
-                                <td>Rs. 500</td>
-                                <td><button type="button" class="btn btn-primary">Apply</button></td>
-                            </tr>
-                            <tr class="success">
-                                <td>ALEKHINE CHESS CLUB NEW YEAR OPEN</td>
-                                <td>OUTRAM CLUB, KOLKAT</td>
-                                <td>2019-01-02</td>
-                                <td>2019-01-04</td>
-                                <td>Rs. 500</td>
-                                <td><button type="button" class="btn btn-primary">Apply</button></td>
-                            </tr>
-                            <tr class="warning">
-                                <td>ALEKHINE CHESS CLUB NEW YEAR OPEN</td>
-                                <td>OUTRAM CLUB, KOLKAT</td>
-                                <td>2019-01-02</td>
-                                <td>2019-01-04</td>
-                                <td>Rs. 500</td>
-                                <td><button type="button" class="btn btn-primary">Apply</button></td>
-                            </tr>
+                            @endforeach
+                            @endif
+                            </tbody> 
                         </table>
                     </div>
                 </fieldset>

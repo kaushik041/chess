@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\UserRegister;
 use Illuminate\Http\Request;
-
+use DB;
 class UserRegisterController extends Controller
 {
     /**
@@ -41,6 +41,12 @@ class UserRegisterController extends Controller
         $data = request()->all();
         //dd($data);
         $user = UserRegister::create($data);
+        //dd($user->dist);
+        $joinId = $user->dist."0".$user->id;
+       // dd($joinId);
+        $data1['joidId'] = $joinId;
+        $userIdUdpade = UserRegister::find($user->id);
+        $t=$userIdUdpade->fill($data1)->save();
         return back(); 
     }
 

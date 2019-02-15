@@ -23,6 +23,7 @@ class CreateUserRegistersTable extends Migration
             $table->string('gender')->nullable();
             $table->string('address')->nullable();
             $table->string('dist')->nullable();
+            $table->string('joidId')->nullable();
             $table->timestamps();
         });
     }
